@@ -1,63 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en-us">
+	<head>
+		<meta charset = "UTF-8">
+			<title>Giphy Distractify</title>
+			<!-- Bootstrap CDN -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+			
+			<!-- My stylesheet -->
+			<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+			
+			<!--jQuery-->
+			<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	</head>
+	
+	<body>
+		<section>
+			<div id = "buttonDisplay"></div>
+		</section>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
+		<section>
+			<div class = "contianer">
+				<div class = "row">
+					<div id = "gifs" class = "col-md-6"></div>
+						
+					
+					<div id = "addGif" class = "col-md-4 offset-md-2">
+						<form>
+							<div class="form-group">
+								<label for="userInput">Search for gifs here: </label>
+								<input type="email" class="form-control" id="userInput" aria-describedby="userInput" placeholder="i.g. hippo">
+							</div>
+							<button type="submit" id = "submitBtn" class="btn btn-primary">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
 
-</head>
-
-<body>
 
 
-  
-
-    <script>
-      //on page load:
-        //Set variables:
-          //buttonTitles = ["basebal", "hockey", "football"]
-        //diplayButtons - function
-        	//Clear previous buttons from screen
-        	//for loop through buttonTitles array
-        		//Create a jQuery button
-        		//Add attribut to jQuery button created (attribute title: "button-title", attribute value: the button vaule at that index)
-        		//Put the current buttonTitle that we are looping through in the button
-        		//Append the button to the page
-        //When the user clicks on one of the buttons - function
-        	//we might need prevent default
-        	//get the attribute of the button clicked, and store it in a variable.
-        	//clear out old images from page (.empty)
-        	//AJAX call to GIPHY
-        		// Method | GET
-        		//URL | https://api.giphy.com/ ........> //this will be found using the giphy website and piecing it together.
-        		//.done
-        			//loop through response.data
-        				//create a jQuery div
-        				//create a jQuery image
-        				//set the src attribute of the JQuery image to be the image from GIPHY response (data[i].images.original.still)
-        				//Add data-state attribute to jQuery image = "still"
-        				//add data-animateurl attribute to JQuery image = response.date[i].images.original.url
-        				//Add data-stillurl attriubte to jqueruy image = response.data[i].images.original_still.url
-        				//create a jQuery paragrpah
-        				//Put the rating from GIPHY response into paragraph created (response.data[i].rating)
-        				//Append jQuery image to jQuery div
-        				//Append jQuery paragraph to jQuery div
-        				//Append jQuery div to the page
-        //On click of form submit button - function
-        	//create variable of user input text field
-        	//push variable just created to array (buttonTitles)
-        	//run displayButtons function
-        //On click of image div - function
-        	//Set variable equal to iage clicked data-state attribute
-        	//if (imageState == "still")
-        		//Set src attribute of image clicked to be the data-animateurl attribute of the image clicked
-        		//Set data-state attribute of image clicked to be "animated"
-        	//else if (imageState == "animated")
-        		//Set src attribute of image clicked to be the data-stillurl attribute of the image clicked
-        		//Set data-state attribute of image clicked to be "still"
-        		
-    </script>
-
-</body>
-
+		<script src = "assets/javascript/game.js"></script>
+	</body>
 </html>
