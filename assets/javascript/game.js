@@ -60,7 +60,7 @@ $(document).ready(function() {
 			url: queryURL,
 			method: "GET"
 		}).then(function(response){
-			console.log(response);
+			
 			//Creating variable that gets us to the meat of the data.
 			var results = response.data;
 
