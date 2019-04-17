@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	var userClick;
 	
 	//Clearing out the buttons so when a user adds a button there aren't duplicates of the original array plus the newly created button.
 	$("#buttonDisplay").empty();
@@ -17,27 +16,45 @@ $(document).ready(function() {
 	}
 	
 	//Event delegation is being used here because we are listening for click events on elements that were not around when the page was first loaded/are being dynamically created.
-	//Click event capturing the value of the button; the value of the button is mutating the variable userClick.
+	//Click event capturing the value of the button.
 	$(document).on("click", ".gifButton", function() {
+		
+		//Emptying out the gifsContainer of any gifs from previous clicks if there were any.
 		$("#gifsContainer").empty();
-		userClick = $(this).attr("data-name");
+
+		//Grabbing the data-name value to store in a variable.
+		var userClick = $(this).attr("data-name");
 	
-		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + userClick + "&limit='9'&api_key=J8A3k0l7DLoaLZCF7lLPkK4LUzFtbXg1";
+		//Built out queryURL based on userClick's value.  Filtering the number of results returned to 9.
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + userClick + "&limit=9&api_key=J8A3k0l7DLoaLZCF7lLPkK4LUzFtbXg1";
 	
+		//Ajax call that is triggered when there is a click on the topic button.
 		$.ajax({
 			url: queryURL,
 			method: "GET"
 		}).then(function(response){
+			
+			//Creating variable that gets us to the meat of the data.
 			var results = response.data;
 
-			for (var i = 0; i < 10; i++){
+			//For loop that goes through our results and creates an image tag and paragraph tag for each response item.  
+			for (var i = 0; i < results.length; i++){
 				var gifImage = $("<img>");
+
+				//The paragraph tag's text is set to the iteration's rating value.
 				var p = $("<p>").text("Rating: " + results[i].rating);
+
+				//Variable that holds current iteration's gif
 				var imageUrl = results[i].images.fixed_height.url;
+
+				//Setting the src attribute to be the previous variable's value.
 				gifImage.attr("src", imageUrl);
+
+				//Adding an element of accesibility by setting the alt attribute to be the value of the user's click.
 				gifImage.attr("alt", userClick + " gif");
 			
-				$("#gifsContainer").append(gifImage);
+				//Finally appending the gif and that gif's rating to the gifsContainer.
+				$("#gifsContainer").append(gifImage, p);
 			}
 				
 		})
@@ -48,14 +65,7 @@ $(document).ready(function() {
 
 
 
-//consider .param() for building out dynamic url with object...look into further documentation for .param().
 
-//get my preselected giphy array on the page as buttons--no gifs will be displayed until the corresponding button is clicked on.
-	//the array will be looped through and the term in quotes will be placed into the query url completing it
-		//the ajax call will be called with a click event.
-
-//build out gif section w/o dynamic queryURL 
-//build dynamic queryURL with click event
 
 //when a user adds a gif with the form that will be .pushed to topics
 	//so get a dynamic button population and click event
@@ -64,6 +74,8 @@ $(document).ready(function() {
 
 
 
+
+//consider .param() for building out dynamic url with object...look into further documentation for .param().
 
 
 
