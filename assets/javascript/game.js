@@ -121,10 +121,6 @@ $(document).ready(function() {
 
 });
 
-//still picture path: results[i].images.original_still.url
-//gif in motion path: results[i].images.fixed_height.url
-
-
 
 //styling: 
 	//style the 9 gifs that are being displayed to the page currently.
