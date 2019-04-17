@@ -6,15 +6,42 @@ $(document).ready(function() {
 	//Original array of topics
 	var topics = ["puppy", "kitten", "dog", "cat", "owl", "squirrel", "lady bug", "bird", "falcon", "fish", "bear", "monkey", "zebra", "lion", "elephant"];
 
-	//For loop that goes through each topic in the array and creates a button, adds a class and attribute to that button, sets the text of the button, then finally appends the button to the buttonDisplay area.
-	for (var i = 0; i < topics.length; i++){
-		var newBtn = $("<button>");
-		newBtn.addClass("gifButton");
-		newBtn.attr("data-name", topics[i]);
-		newBtn.text(topics[i]);
-		$("#buttonDisplay").append(newBtn);
+	//Function with for loop that goes through each topic in the array and creates a button, adds a class and attribute to that button, sets the text of the button, then finally appends the button to the buttonDisplay area.
+	function createButtons() {
+		for (var i = 0; i < topics.length; i++){
+			var newBtn = $("<button>");
+			newBtn.addClass("gifButton");
+			newBtn.attr("data-name", topics[i]);
+			newBtn.text(topics[i]);
+			$("#buttonDisplay").append(newBtn);
+		}
 	}
-	
+
+	//Calling above function so that when the page first loads there are buttons on the page.
+	createButtons();
+
+	//Click event to capture the user's input into the form.
+	$("#submitBtn").on("click", function(event){
+		
+		//Used to tell the form not to submit when the button is clicked.
+		event.preventDefault();
+
+		//Variable that collects the user's input
+		var formValue = $("#userInput").val();
+		
+		//User's input pushed into the topic array.
+		topics.push(formValue);
+		
+		//Clears out the button display so that there are not duplicate buttons
+		$("#buttonDisplay").empty();
+
+		//Clearing out the form field and setting it to be blank after the user has submitted their button.
+		$("#userInput").val("");
+
+		//Calling the function that puts buttons on the page with the new button created by the user's input.
+		createButtons();
+	})
+
 	//Event delegation is being used here because we are listening for click events on elements that were not around when the page was first loaded/are being dynamically created.
 	//Click event capturing the value of the button.
 	$(document).on("click", ".gifButton", function() {
@@ -57,21 +84,23 @@ $(document).ready(function() {
 				$("#gifsContainer").append(gifImage, p);
 			}
 				
-		})
+		});
 	
 	});
 
-})
+});
 
 
 
 
 
-//when a user adds a gif with the form that will be .pushed to topics
-	//so get a dynamic button population and click event
 
 
+//state--be able to start and stop the gif.  The gif loads in a still state
 
+//styling: 
+	//style the 9 gifs that are being displayed to the page currently.
+	//style the page overall.
 
 
 
