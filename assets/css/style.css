@@ -7,6 +7,7 @@ body {
     background-attachment: scroll;
     background-size: cover;
     color: #666666;
+    max-width: 100%;
 }
 h1 {
     font-size: 16px;
@@ -30,7 +31,11 @@ h1 {
     background-color: #ffffe6;
 }
 #submitBtn {
-    background-color: #ff6666;
-    border-color: #ff6666;
+    background-color: #ff9999;
+    border-color: #ff9999;
     color: #666666;
+    margin-bottom: 20px;
+}
+#gifsContainer {
+    display: inline-block;
 }

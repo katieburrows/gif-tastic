@@ -122,22 +122,4 @@ $(document).ready(function() {
 });
 
 
-//styling: 
-	//style the 9 gifs that are being displayed to the page currently.
-	//style the page overall.
-
-
-
 //consider .param() for building out dynamic url with object...look into further documentation for .param().
-
-
-
-
-
-
-
-
-
-
-
-

@@ -24,14 +24,11 @@
 		<section>
 			<div class = "contianer">
 				<div class = "row">
-					<div id = "gifsContainer" class = "col-md-6"></div>
-						
-					
-					<div id = "addGif" class = "col-md-4 offset-md-2">
+					<div id = "addGif" class = "col-md-4 offset-md-8">
 						<form>
 							<div class="form-group">
 								<label for="userInput">Search for gifs here: </label>
-								<input type="email" class="form-control" id="userInput" aria-describedby="userInput" placeholder="i.g. hippo">
+								<input type="userInput" class="form-control" id="userInput" aria-describedby="userInput" placeholder="i.g. hippo">
 							</div>
 							<button type="submit" id = "submitBtn" class="btn btn-primary">Submit</button>
 						</form>
@@ -39,9 +36,17 @@
 				</div>
 			</div>
 		</section>
+		<section>
+			<div id = "gifsContainer"></div>
+		</section>
 
 
 
 		<script src = "assets/javascript/game.js"></script>
 	</body>
 </html>
+<!-- styling is all that's left
+	get the 9 gifs to display on the page in a 3x3 block
+	get a uniform size on all the gifs
+	fix the background--make it stop zooming in once a gif is clicked
+-->
