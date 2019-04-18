@@ -6,6 +6,7 @@ body {
     background-repeat: no-repeat; 
     background-attachment: scroll;
     background-size: cover;
+    color: #666666;
 }
 h1 {
     font-size: 16px;
@@ -20,11 +21,16 @@ h1 {
 .gifButton {
     border-radius: 3px;
     margin: 0px 4px 5px 4px;
-    background-color: #ff4dff;
-    border-color: #ff66a3;
+    background-color: #ff66ff;
+    border-color: #ff66ff;
+    color: #666666;
 }
 
+#userInput {
+    background-color: #ffffe6;
+}
 #submitBtn {
     background-color: #ff6666;
     border-color: #ff6666;
+    color: #666666;
 }
