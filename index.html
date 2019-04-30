@@ -14,30 +14,32 @@
 	</head>
 	
 	<body>
-		<section>
-			<h1>About: click on the buttons below to populate 9 gifs related to that topic.  You can add gifs to the page by entering in a serach term in the form on the right side of this page, which will create a new button.  Click on that button to get your gifs!  All gifs start out still but will animate when you click on them.  Enjoy!</h1>
-		</section>
-		<section>
-			<div id = "buttonDisplay"></div>
-		</section>
+		<section id = "outsideWrapper">
+			<section>
+				<h1>About: click on the buttons below to populate 9 gifs related to that topic.  You can add gifs to the page by entering in a serach term in the form on the right side of this page, which will create a new button.  Click on that button to get your gifs!  All gifs start out still but will animate when you click on them.  Enjoy!</h1>
+			</section>
+			<section>
+				<div id = "buttonDisplay"></div>
+			</section>
 
-		<section>
-			<div class = "contianer">
-				<div class = "row">
-					<div id = "addGif" class = "col-md-4 offset-md-8">
-						<form>
-							<div class="form-group">
-								<label for="userInput">Search for gifs here: </label>
-								<input type="userInput" class="form-control" id="userInput" aria-describedby="userInput" placeholder="i.g. hippo">
-							</div>
-							<button type="submit" id = "submitBtn" class="btn btn-primary">Submit</button>
-						</form>
+			<section>
+				<div class = "contianer">
+					<div class = "row">
+						<div id = "addGif" class = "col-md-4 offset-md-8">
+							<form>
+								<div class="form-group">
+									<label for="userInput">Search for gifs here: </label>
+									<input type="userInput" class="form-control" id="userInput" aria-describedby="userInput" placeholder="i.g. hippo">
+								</div>
+								<button type="submit" id = "submitBtn" class="btn btn-primary">Submit</button>
+							</form>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section>
-			<div id = "gifsContainer"></div>
+			</section>
+			<section>
+				<div id = "gifsContainer"></div>
+			</section>
 		</section>
 
 
