@@ -2,15 +2,13 @@ body {
     background-image: url(../images/backgroundImg.jpg);
     /* Photo by Miguel Á. Padriñán from Pexels */
     background-repeat: no-repeat; 
-    background-attachment: scroll;
-    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100%;
 }
 #outsideWrapper {
     width: 80%;
-    margin: 0 auto;   
-
-    color: #666666;
-    max-width: 100%;
+    margin: 0 auto; 
+    color: #666666; 
 }
 h1 {
     font-size: 16px;
