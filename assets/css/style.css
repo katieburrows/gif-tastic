@@ -38,3 +38,10 @@ h1 {
 #gifsContainer {
     display: inline-block;
 }
+footer {
+    background-color: #ffffe6;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0%;
+}
