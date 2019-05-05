@@ -41,7 +41,7 @@ h1 {
 footer {
     background-color: #ffffe6;
     text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0%;
+    padding: 25px;
+    width: 125%;
+    margin-left: -12.5%;
 }
