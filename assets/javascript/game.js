@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$("#buttonDisplay").empty();
 	
 	//Original array of topics
-	var topics = ["puppy", "kitten", "dog", "cat", "owl", "squirrel", "lady bug", "bird", "falcon", "fish", "bear", "monkey", "zebra", "lion", "elephant", "antelope", "deer", "crow"];
+	var topics = ["puppy", "kitten", "squirrel", "lady bug", "bird", "falcon", "fish", "bear", "monkey", "zebra", "lion", "elephant", "antelope", "deer", "crow", "dog", "cat", "owl"];
 
 	//Function with for loop that goes through each topic in the array and creates a button, adds a class and attribute to that button, sets the text of the button, then finally appends the button to the buttonDisplay area.
 	function createButtons() {
