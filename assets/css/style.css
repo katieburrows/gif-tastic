@@ -11,12 +11,12 @@ body {
 h1 {
     width: 40%;
     margin: 0 auto;
-    margin-top: 20px;
     margin-bottom: 20px;
-    border: 5px solid #ccfff2;
+    border: 5px solid #ffcc01;
     border-radius: 3px;
-    background-color: #ccfff2;
+    background-color: #ffcc01;
     text-align: center;
+    padding: 14px;
 }
 h2 {
     font-size: 16px;
