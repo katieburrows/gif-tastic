@@ -47,7 +47,7 @@ h2 {
 }
 #gifsContainer {
     display: inline;
-    margin-left: 1%;
+    margin-left: 8%;
 }
 footer {
     background-color: #ffffe6;
@@ -58,4 +58,8 @@ footer {
 }
 .gif{
     margin: 20px;
+    border-radius: 5px;
+}
+p {
+    display: inline;
 }
