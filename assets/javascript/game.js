@@ -80,7 +80,7 @@ $(document).ready(function() {
 					"src": imagePath.original_still.url,
 					
 					//Telling JS what data-still looks like, also happens to be the starting point when we load the gifs.
-                    "data-still": imagePath.original_still.url,
+          "data-still": imagePath.original_still.url,
 					
 					//Telling JS what data-animated looks like.
 					"data-animate": imagePath.fixed_height.url,
@@ -91,9 +91,10 @@ $(document).ready(function() {
 					//Adding an element of accessibility--our alt attribute.
 					"alt": userClick + " gif",
 
-					//Setting the height of the gif to 400 so it doesn't expand/contract when clicked on.
-                    "height": 400,
-                });
+					//Setting the height/width of the gif to 300 so it doesn't expand/contract when clicked on.
+					"height": 300,
+					"width": 300
+        });
 
 				//Finally appending the gif and that gif's rating to the gifsContainer.
 				$("#gifsContainer").append(gifImage, p);
