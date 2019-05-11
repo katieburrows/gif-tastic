@@ -68,7 +68,7 @@ $(document).ready(function() {
 			for (var i = 0; i < results.length; i++){
 
 				//The paragraph tag's text is set to the iteration's rating value.
-				var p = $("<p>").text("Rating: " + results[i].rating);
+				// var p = $("<p>").text("Rating: " + results[i].rating);
 
 				//Creating variable shortcut for navigating the response object.
 				var imagePath = results[i].images;
@@ -93,11 +93,11 @@ $(document).ready(function() {
 
 					//Setting the height/width of the gif to 300 so it doesn't expand/contract when clicked on.
 					"height": 300,
-					"width": 300
+					"width": 300,
         });
 
 				//Finally appending the gif and that gif's rating to the gifsContainer.
-				$("#gifsContainer").append(gifImage, p);
+				$("#gifsContainer").append(gifImage);
 			}
 			
 			//Click event for our loaded gifs.

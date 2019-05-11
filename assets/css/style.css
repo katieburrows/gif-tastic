@@ -46,7 +46,8 @@ h2 {
     margin-bottom: 20px;
 }
 #gifsContainer {
-    display: inline-block;
+    display: inline;
+    margin-left: 3%;
 }
 footer {
     background-color: #ffffe6;
@@ -54,4 +55,7 @@ footer {
     padding: 25px;
     width: 125%;
     margin-left: -12.5%;
+}
+.gif{
+    margin: 10px;
 }
