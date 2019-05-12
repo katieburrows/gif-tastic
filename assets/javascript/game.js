@@ -48,7 +48,7 @@ $(document).ready(function() {
 		
 		//Emptying out the gifsContainer of any gifs from previous clicks if there were any.
 		$("#gifsContainer").empty();
-
+		
 		//Grabbing the data-name value to store in a variable.
 		var userClick = $(this).attr("data-name");
 	
@@ -98,8 +98,12 @@ $(document).ready(function() {
 
 				//Finally appending the gif and that gif's rating to the gifsContainer.
 				$("#gifsContainer").append(gifImage, p);
+
+
 			}
 			
+
+
 			//Click event for our loaded gifs.
 			$(".gif").on("click", function() {
 				
