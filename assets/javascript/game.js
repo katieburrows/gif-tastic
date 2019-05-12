@@ -91,7 +91,7 @@ $(document).ready(function() {
 					//Adding an element of accessibility--our alt attribute.
 					"alt": userClick + " gif",
 
-					//Setting the height/width of the gif to 300 so it doesn't expand/contract when clicked on.
+					//Setting the height/width of the gif to 300 so it doesn't expand/contract when clicked on and is uniform in size.
 					"height": 200,
 					"width": 200
         });
