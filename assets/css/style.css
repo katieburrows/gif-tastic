@@ -53,7 +53,8 @@ h2 {
 #stickyFooter {
     background-color: #ffffe6;
     text-align: center;
-    padding: 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
     width: 125%;
     margin-left: -12.5%;
     left: 0;
