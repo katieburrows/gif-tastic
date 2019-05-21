@@ -10,6 +10,7 @@ https://katieburrows.github.io/gif-tastic/
 * Bootstrap
 * JavaScript
 * jQuery
+* AJAX
 * Giphy API
 
 ### Developed by Katie Burrows
